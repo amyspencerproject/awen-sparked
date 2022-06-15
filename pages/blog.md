@@ -1,8 +1,7 @@
 ---
 layout: layouts/blog.njk
-title: Blog
-metaDescription: A sample Blog page listing various posts and authors.
-date: 2017-01-01
+title: The Garden
+date: Last Modified
 permalink: /blog/index.html
 eleventyNavigation:
   key: Blog
