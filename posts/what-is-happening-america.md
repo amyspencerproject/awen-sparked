@@ -5,6 +5,7 @@ author: ACS
 summary: America I love you but you are breaking my heart.
 tags:
   - democracy
+  - seedling
 ---
 I knew it might happen. Then there was the leaked draft of the opinion and I knew it was going to happen. But when it did happen I was still shook. Seeing the headlines that Roe was overturned was hard for me to wrap my brain around. I do my best to not vilify the people on the other side of this political and religious issue. I pity them because I think they have been duped. I think it is lazy to base so many of your political and societal choices on one issue. 
 
