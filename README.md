@@ -10,3 +10,10 @@ This site was built with [Eleventy](https://www.11ty.dev/) a static site generat
 [Repository](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
 
 [Netlify CMS Template Page](https://www.netlifycms.org/docs/start-with-a-template/)
+
+## Local Dev Stuff
+
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
