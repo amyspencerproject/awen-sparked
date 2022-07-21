@@ -1,7 +1,8 @@
+/******** BASE STYLES ********/
 :root {
 	--primary: #404040;
-	--secondary: white;
-	--background: #eee;
+	--secondary: rgb(123, 8, 158);
+	--background: #e0e0eb;
 }
 
 *, *:before, *:after {
@@ -34,13 +35,16 @@ code {
 	line-height: 1.5;
 }
 
-a[href],
+a[href] {
+	color: var(--primary);
+}
 a[href]:visited {
 	color: var(--primary);
 }
 
-a[href]:not(:hover) {
+a[href]:hover {
 	text-decoration: none;
+	color: var(--secondary);
 }
 
 img {
@@ -109,12 +113,13 @@ header nav li a {
 	border-radius: .25em;
 }
 
-header nav li a[href]:not(:hover) {
+header nav li a[href]:hover {
 	text-decoration: none;
+	color: var(--secondary);
 }
 
 header nav li a[data-current="current item"] {
-	background-color: #ebcb7a;
+	background-color: #fff5cc;
 }
 
 /* Posts List */
@@ -142,7 +147,7 @@ a[rel="tag"]:visited {
 	line-height: 2em;
 	height: 2em;
   border: 1px solid var(--secondary);
-	background-color: var(--secondary);
+	/* background-color: var(--secondary); */
 	color: var(--primary);
   border-radius: .25em;
   text-decoration: none;
@@ -186,10 +191,17 @@ textarea {
 
 button {
 	border: 1px solid var(--primary);
-	background-color: var(--primary);
+	background-color: #fff5cc;
 	color: var(--secondary);
 	cursor: pointer;
 }
+
+/* Footer Styles */
+
+.footer-info {
+	font-size: 0.9rem;
+	color: #787777;
+};
 
 @media screen and (min-width:768px) {
 	:root {
