@@ -194,7 +194,38 @@ button {
 	background-color: #fff5cc;
 	color: var(--secondary);
 	cursor: pointer;
+	
 }
+
+/* Nav Styles */
+.nav-list {
+	text-align: center;
+}
+
+/* Contact Form Styles */
+
+.contact-form {
+	display: grid;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	grid-template-rows: auto 1fr auto;
+	background: url(../img/succulents.jpg);
+	/* background-size: cover; */
+	/* background-color: fuchsia; */
+
+/* form-button {
+	border: 1px solid var(--primary);
+	background-color: #fff5cc;
+	color: var(--secondary);
+	cursor: pointer;
+	width: 100%;
+  	padding: 1em;
+  	margin-bottom: 1em;
+	font-size: 1rem;
+	font-family: "Avenir", "Avenir Next", sans-serif;
+} */
+
 
 /* Footer Styles */
 

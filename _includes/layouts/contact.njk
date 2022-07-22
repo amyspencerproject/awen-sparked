@@ -1,9 +1,27 @@
 ---
-layout: layouts/base.njk
 section: contact
 ---
-<h1>{{ title }}</h1>
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
 
-{{ layoutContent | safe }}
+	{% include "components/head.njk" %}
 
-{% include "components/form.njk" %}
+	<body class="contact-form" >
+
+		<header>
+			<em>
+				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
+			</em>
+			{% include "components/nav.njk" %}
+		</header>
+
+		<main>
+			{{ layoutContent | safe }}
+            {% include "components/form.njk" %}
+		</main>
+
+		{% include "components/footer.njk" %}
+
+	</body>
+
+</html>
