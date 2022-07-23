@@ -207,11 +207,11 @@ button {
 .contact-form {
 	display: grid;
 	justify-content: center;
-	height: 100vh;
+	height: 500px;
 	width: 100%;
 	grid-template-rows: auto 1fr auto;
-	background: url(../img/succulents.jpg);
-	/* background-size: cover; */
+	background-image: url(../img/succulents.png);
+	background-size: cover;
 	/* background-color: fuchsia; */
 
 /* form-button {
