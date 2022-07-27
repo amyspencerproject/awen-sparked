@@ -210,9 +210,10 @@ button {
 	height: 500px;
 	width: 100%;
 	grid-template-rows: auto 1fr auto;
-	background-image: url(../img/succulents.png);
+	background-image: url(../img/succulents.jpg);
 	background-size: cover;
 	/* background-color: fuchsia; */
+}
 
 /* form-button {
 	border: 1px solid var(--primary);
@@ -232,8 +233,10 @@ button {
 .footer-info {
 	font-size: 0.9rem;
 	color: #787777;
-};
+}
 
+
+/***** Desktop Screen Width *****/
 @media screen and (min-width:768px) {
 	:root {
 		font-size: 1.1rem;
