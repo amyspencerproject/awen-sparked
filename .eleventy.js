@@ -75,40 +75,45 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
-  /* Asynch function from plugin install directions */
-  const Image = require("@11ty/eleventy-img");
+  /* Fetch Plugin - handles cache */
+  // const EleventyFetch = require("@11ty/eleventy-fetch");
 
-  (async () => {
-    let url = "https://images.unsplash.com/photo-1608178398319-48f814d0750c";
-    let stats = await Image(url, {
-      widths: [300]
-    });
+  // async function() {
+  //   let url = "";
 
-    console.log( stats );
-  })();
+  //   /* This returns a promise */
+  //   return EleventyFetch(url, {
+  //     duration: "1d", // save for 1 day
+  //     type: "json"    // we’ll parse JSON for you
+  //   });
+  // };
+
+  // const EleventyFetch = require("@11ty/eleventy-fetch");
 
 
   /**** ASYNCHRONOUS SHORTCODE to get images into CSS for background ****/ 
-  // const Image = require("@11ty/eleventy-img");
+  const Image = require("@11ty/eleventy-img");
 
-  // async function imageShortcode(src, alt) {
-  //   if(alt === undefined) {
-  //     // You bet we throw an error on missing alt (alt="" works okay)
-  //     throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-  //   }
-  
-  //   let metadata = await Image(src, {
-  //     widths: [600],
-  //     formats: ["jpeg"]
-  //   });
-  
-  //   let data = metadata.jpeg[metadata.jpeg.length - 1];
-  //   return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
-  // }
+  async function imageShortcode(src, alt) {
+    if(alt === undefined) {
+      // You bet we throw an error on missing alt (alt="" works okay)
+      throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+    }
 
-  // eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  // eleventyConfig.addLiquidShortcode("image", imageShortcode);
-  // eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+    let metadata = await Image(src, {
+      widths: [600],
+      formats: ["jpeg"]
+    });
+
+    let data = metadata.jpeg[metadata.jpeg.length - 1];
+    return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+  }
+
+  
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+  
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
